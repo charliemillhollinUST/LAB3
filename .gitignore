@@ -1,0 +1,78 @@
+# Build directories
+**/build/
+**/Debug/
+**/Release/
+build/*
+Debug/*
+Release/*
+
+# Build directories
+build/
+Debug/
+Release/
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+*.bin
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# STM32 specific
+*.lst
+*.list
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+
+##
+#git ls-files | ForEach-Object { 
+#    $dir = Split-Path $_ -Parent
+#    if ($dir) { mkdir "..\LAB1_MX_submission\$dir" -Force }
+#    copy $_ "..\LAB1_MX_submission\$_"
+#}
+##
