@@ -72,6 +72,11 @@ CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 compile_commands.json
+CMakePresets.json
+
+# Specific files
+stm32f439zitx_flash.ld
+startup_stm32f439xx.s
 
 
 ##
