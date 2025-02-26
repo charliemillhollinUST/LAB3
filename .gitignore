@@ -2,6 +2,8 @@
 **/build/
 **/Debug/
 **/Release/
+**/Drivers/
+**/cmake/
 build/*
 Debug/*
 Release/*
@@ -10,6 +12,8 @@ Release/*
 build/
 Debug/
 Release/
+Drivers/
+cmake/
 
 # IDE specific
 .vscode/

@@ -55,9 +55,9 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern DMA_HandleTypeDef hdma_adc1;
-extern DMA_HandleTypeDef hdma_usart1_rx;
-extern DMA_HandleTypeDef hdma_usart1_tx;
+extern ADC_HandleTypeDef hadc1;
+extern TIM_HandleTypeDef htim14;
+extern UART_HandleTypeDef huart2;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -201,45 +201,45 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles DMA2 stream0 global interrupt.
+  * @brief This function handles ADC1, ADC2 and ADC3 global interrupts.
   */
-void DMA2_Stream0_IRQHandler(void)
+void ADC_IRQHandler(void)
 {
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 0 */
+  /* USER CODE BEGIN ADC_IRQn 0 */
 
-  /* USER CODE END DMA2_Stream0_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_adc1);
-  /* USER CODE BEGIN DMA2_Stream0_IRQn 1 */
+  /* USER CODE END ADC_IRQn 0 */
+  HAL_ADC_IRQHandler(&hadc1);
+  /* USER CODE BEGIN ADC_IRQn 1 */
 
-  /* USER CODE END DMA2_Stream0_IRQn 1 */
+  /* USER CODE END ADC_IRQn 1 */
 }
 
 /**
-  * @brief This function handles DMA2 stream2 global interrupt.
+  * @brief This function handles USART2 global interrupt.
   */
-void DMA2_Stream2_IRQHandler(void)
+void USART2_IRQHandler(void)
 {
-  /* USER CODE BEGIN DMA2_Stream2_IRQn 0 */
+  /* USER CODE BEGIN USART2_IRQn 0 */
 
-  /* USER CODE END DMA2_Stream2_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_usart1_rx);
-  /* USER CODE BEGIN DMA2_Stream2_IRQn 1 */
+  /* USER CODE END USART2_IRQn 0 */
+  HAL_UART_IRQHandler(&huart2);
+  /* USER CODE BEGIN USART2_IRQn 1 */
 
-  /* USER CODE END DMA2_Stream2_IRQn 1 */
+  /* USER CODE END USART2_IRQn 1 */
 }
 
 /**
-  * @brief This function handles DMA2 stream7 global interrupt.
+  * @brief This function handles TIM8 trigger and commutation interrupts and TIM14 global interrupt.
   */
-void DMA2_Stream7_IRQHandler(void)
+void TIM8_TRG_COM_TIM14_IRQHandler(void)
 {
-  /* USER CODE BEGIN DMA2_Stream7_IRQn 0 */
+  /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 0 */
 
-  /* USER CODE END DMA2_Stream7_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_usart1_tx);
-  /* USER CODE BEGIN DMA2_Stream7_IRQn 1 */
+  /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim14);
+  /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 1 */
 
-  /* USER CODE END DMA2_Stream7_IRQn 1 */
+  /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
