@@ -24,8 +24,8 @@ void system_loop(void) {
 void timer_loop(void) {
     if (uart_ready) {
         
-        uart_buffer[0] = (adc_buffer >> 8) & 0xFF;  // bits 8-11
-        uart_buffer[1] = adc_buffer & 0xFF;         // bits 0-7
+        uart_buffer[0] = (adc_buffer >> 8);  // bits 8-11
+        uart_buffer[1] = adc_buffer;         // bits 0-7
         
         uart_ready = 0;
         HAL_UART_Transmit_IT(&huart2, uart_buffer, 2);
