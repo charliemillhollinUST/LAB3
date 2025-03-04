@@ -6,3 +6,5 @@ Part 1 initially complete.
 Sending ADC data from PA4 over USART2 PD5 and PD6 pins. 
 ADC data is 12 bits, so data is split across two 8 bit UART transmissions. 
 See timer_loop() function to see how this is split. Transmissions occur every 10mS as per tim14.
+
+Part 2 of the lab can also utilize this code, as there are no new requirements for the transmission side.
